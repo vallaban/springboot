@@ -2,15 +2,14 @@ package com.udemy.spring.springselenium.pages.google;
 
 import java.util.List;
 
+import com.udemy.spring.springselenium.kelvin.annotation.PageFragment;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.springframework.stereotype.Component;
 
 import com.udemy.spring.springselenium.pages.BasePage;
-@Component
+@PageFragment
 public class SearchComponent extends BasePage {
-
     @FindBy( name = "q")
     private WebElement searchBox;
 

@@ -2,12 +2,13 @@ package com.udemy.spring.springselenium.pages.google;
 
 
 
+import com.udemy.spring.springselenium.kelvin.annotation.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
 import com.udemy.spring.springselenium.pages.BasePage;
-@Component
+
+@Page
 public class GooglePage extends BasePage {
     @Autowired
     private SearchComponent searchcomponent;
@@ -36,5 +37,11 @@ public class GooglePage extends BasePage {
         // TODO Auto-generated method stub
         return this.searchcomponent.isAt();
     }
+
+    public void close()
+    {
+        this.driver.quit();
+    }
+
     
 }
